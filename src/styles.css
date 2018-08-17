@@ -1,0 +1,29 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import "~node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "~node_modules/font-awesome/css/font-awesome.min.css"; 
+
+
+@import "assets/css/riliwan-rabo.css";
+@import "assets/css/style.css";
+@import "assets/css/form.css";
+@import "assets/css/loading-bars.css";
+
+div.card-header {
+ font-size: large;
+}
+
+div.card {
+  margin-top: 10px
+}
+
+.table {
+  margin-top: 10px
+}
+.table td,th {
+  text-align: center;   
+}
+
+html {
+  font-size: 14px;
+}
+

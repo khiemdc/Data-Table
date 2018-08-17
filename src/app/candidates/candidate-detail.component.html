@@ -1,0 +1,87 @@
+<div class="container">
+    <div class='card'
+    *ngIf='candidate'>
+  <div class='card-header'>
+    {{pageTitle + ': ' + candidate.Name}}
+  </div>
+  <div class='card-body'>
+    <div class='row'>
+      <div class='col-md-8'>
+        <div class='row'>
+          <div class='col-md-4'>First Name:</div>
+          <div class='col-md-8'>{{candidate.FirstName}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Middle Name:</div>
+          <div class='col-md-8'>{{candidate.MiddleName }}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Last Name:</div>
+          <div class='col-md-8'>{{candidate.LastName}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Street Address:</div>
+          <div class='col-md-8'>{{candidate.Address}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Line 2:</div>
+          <div class='col-md-8'>{{candidate.Address2 }}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>City:</div>
+          <div class='col-md-8'>{{candidate.City }}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>State:</div>
+          <div class='col-md-8'>{{candidate.State}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>ZipCode:</div>
+          <div class='col-md-8'>{{candidate.ZipCode}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Phone Number:</div>
+          <div class='col-md-8'>{{candidate.Phone}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Fax Number:</div>
+          <div class='col-md-8'>{{candidate.Fax}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Email Address:</div>
+          <div class='col-md-8'>{{candidate.EmailAddress}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Website:</div>
+          <div class='col-md-8'>{{candidate.Website}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Comments:</div>
+          <div class='col-md-8'>{{candidate.Comments}}</div>
+        </div>
+      </div>
+              
+    </div>
+  </div>
+  <div class='card-footer'>
+    <div claSS="row">
+      <button class='btn btn-outline-secondary'
+      (click)='onBack()'
+      style='width:80px; margin-left:15px;'>
+      <i class='fa fa-chevron-left'></i> Back
+    </button>
+  
+    <button class='btn btn-primary'            
+      style='margin-left:100px' [routerLink]="['/candidates',candidate.CandidateId, 'edit']">
+       Edit
+    </button>
+
+    <button class='btn btn-danger'            
+      style='margin-left:100px' >
+      <i class="fa fa-trash"></i> Delete
+    </button>
+  </div>   
+    
+  </div>
+  </div>
+</div>

@@ -1,0 +1,90 @@
+<mat-tab-group>
+    <mat-tab label= "All">
+        <div class="mat-elevation-z8">
+            <table mat-table [dataSource]="dataSourceAll" matSort>
+                <ng-container matColumnDef="Name">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-field"> Employee Name </th>
+                    <td mat-cell *matCellDef="let employee"> {{employee.Name}} </td>
+                </ng-container>
+                <ng-container matColumnDef="Start_Date">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-field"> Start Date </th>
+                    <td mat-cell *matCellDef="let employee">{{employee.Start_Date | date}}</td>
+                </ng-container>
+                <ng-container matColumnDef="Clearance">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-field"> Clearance </th>
+                    <td mat-cell *matCellDef="let employee">{{employee.Clearance}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Actions">
+                    <th mat-header-cell *matHeaderCellDef class="header-field"> Actions </th>
+                    <td mat-cell *matCellDef="let row">
+                        <button mat-flat-button (click)="openDialog()">Track</button>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+            <!-- <mat-paginator [pageSizeOptions]="[10, 20]" showFirstLastButtons></mat-paginator> -->
+        </div>
+
+
+    </mat-tab>
+    <mat-tab label="Cleared">
+        <div class="mat-elevation-z8">
+            <table mat-table [dataSource]="dataSourceCleared" matSort>
+                <ng-container matColumnDef="Name">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-field"> Employee Name </th>
+                    <td mat-cell *matCellDef="let employee"> {{employee.Name}} </td>
+                </ng-container>
+                <ng-container matColumnDef="Start_Date">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-field"> Start Date </th>
+                    <td mat-cell *matCellDef="let employee">{{employee.Start_Date | date}}</td>
+                </ng-container>
+                <ng-container matColumnDef="Clearance">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-field"> Clearance </th>
+                    <td mat-cell *matCellDef="let employee">{{employee.Clearance}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Actions">
+                    <th mat-header-cell *matHeaderCellDef class="header-field"> Actions </th>
+                    <td mat-cell *matCellDef="let row">
+                        <button mat-flat-button (click)="openDialog()">Track</button>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+    </mat-tab>
+    <mat-tab label="Uncleared">
+        <div class="mat-elevation-z8">
+            <table mat-table [dataSource]="dataSourceUncleared" matSort>
+                <ng-container matColumnDef="Name">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-field"> Employee Name </th>
+                    <td mat-cell *matCellDef="let employee"> {{employee.Name}} </td>
+                </ng-container>
+                <ng-container matColumnDef="Start_Date">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-field"> Start Date </th>
+                    <td mat-cell *matCellDef="let employee">{{employee.Start_Date | date}}</td>
+                </ng-container>
+                <ng-container matColumnDef="Clearance">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header class="header-field"> Clearance </th>
+                    <td mat-cell *matCellDef="let employee">{{employee.Clearance}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Actions">
+                    <th mat-header-cell *matHeaderCellDef class="header-field"> Actions </th>
+                    <td mat-cell *matCellDef="let row">
+                        <button mat-flat-button (click)="openDialog()">Track</button>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+    </mat-tab>
+
+</mat-tab-group>

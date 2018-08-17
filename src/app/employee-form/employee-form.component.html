@@ -1,0 +1,20 @@
+<section style="background:#efefe9;">
+  <div class="container">
+      <div class="board">
+          <!-- Navigation Area (Circular Tabs) -->
+          <msw-navbar></msw-navbar>
+          <!-- End Navigation Area (Circular Tabs) -->
+
+          <!-- Content Area -->
+          <div class="tab-content">
+              <!-- Routed view  -->
+              <mt-wizard-personal></mt-wizard-personal>
+          </div>
+          <mt-wizard-work></mt-wizard-work>
+          <!-- End Content Area -->
+      </div>
+
+      <!-- For Debugging: show our formData as it is being typed -->
+      <pre>{{ formData | json }}</pre>
+  </div>
+</section>

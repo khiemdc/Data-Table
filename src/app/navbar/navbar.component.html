@@ -1,0 +1,60 @@
+
+<nav id="hero" class="navbar navbar-expand-sm navbar-dark">
+        <a routerLink="home" class="navbar-left"><img src="../../assets/images/deea1.png" class="image-brand"></a>
+    <!-- <a routerLink="about" class="navbar-brand">DEEA</a> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" (click)="toggle()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        
+    <div class="collapse navbar-collapse" id="navbarNavDropdown" [ngClass]="{show : isActive}">
+     
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+              <a routerLink="" class="nav-link">Home</a>
+        </li>
+        
+
+            <li>
+                <a routerLink="/candidates" routerLinkActive="active" class="nav-link">Candidates</a>
+            </li> 
+
+            
+
+            <li>
+                <a routerLink="/employees" routerLinkActive="active" class="nav-link">Employees</a>
+            </li>                
+            
+            <li class="nav-item">                
+                <a routerLink="/billets" routerLinkActive="active" class="nav-link">Billets</a>
+            </li>
+
+            <li class="nav-item">
+                <a routerLink="/reporting" routerLinkActive="active" class="nav-link">Reporting</a>
+            </li>
+            <li class="nav-item ">
+                <ul ></ul>
+                <a routerLink="security" routerLinkActive="active" class="nav-link">Security</a>
+            </li>            
+
+            <li class="nav-item">
+                <a routerLink="project" routerLinkActive="active" class="nav-link">Project</a>
+            </li>
+              
+      </ul>
+      <!--<ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item waves-light" mdbRippleRadius>
+              <a href="https://github.com/khiemdc" target="_blank" class="nav-link"><i class="fa fa-github"></i></a>
+              <a class="nav-link"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li class="nav-item waves-light" mdbRippleRadius>
+              <a href="https://www.twitter.com/khiemdc" target="_blank"class="nav-link"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li class="nav-item waves-light" mdbRippleRadius>
+              <a href="https://www.linkedin.com/in/khiem-le-070770142/" target="_blank" class="nav-link"><i class="fa fa-linkedin"></i></a>
+          </li>
+      </ul> -->
+    </div>
+    
+  </nav>
+  

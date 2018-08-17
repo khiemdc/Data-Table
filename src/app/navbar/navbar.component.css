@@ -1,0 +1,111 @@
+
+#hero {
+    /*background: url('/assets/img/ting.jpg') no-repeat bottom;*/
+    background: #000009;
+    background-size:cover;
+    background-position: 0 60%;
+    margin: 0 0px;
+  }
+
+  .navbar-brand{
+    margin-top: 15px;
+    /*font-family: "europa", Helvetica, Arial, sans-serif !important;*/
+    font-family: "acta-display", Georgia, Times New Roman, serif !important; 
+    text-transform: none; 
+    color: #000000 !important;
+    font-weight: 550;
+}
+
+.navbar-brand:hover{
+    color: #000000 !important;
+    transform: scale(1.025);
+    transition: all .5s ease;
+}
+
+
+.navbar {
+    background: #ffffff no-repeat top center!important;
+    background-size: cover;
+    margin-top: 0px;
+    padding: 0px 30px !important;
+    text-align: center;
+    font-size: 12px !important; 
+              letter-spacing: 2px !important; 
+              text-transform: uppercase; 
+              line-height: 30px !important; 
+              font-family: "europa", Helvetica, Arial, sans-serif !important;
+              font-style: normal;
+              text-align: left !important; 
+              box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .nav-item{
+    display: inline-block;
+}
+
+.navbar .nav-link {
+        transition: 0.5s ease;
+        color: #000000!important;
+        font-weight: 550;
+        text-decoration: none;
+        padding: 20px 0;
+        margin: 0 20px;
+    }
+.navbar .nav-link:hover {
+        margin-top:10px !important;
+        border-top: 2px solid #f06023;
+        border-bottom: 2px solid #f06023;
+        padding: 6px 0px; 
+      }
+
+      /* .navbar .nav-link:active {
+        margin-top:10px !important;
+        border-top: 2px solid #3f51b5;
+        border-bottom: 2px solid #3f51b5;
+        padding: 6px 0px; 
+      } */
+ 
+      .image-brand {
+        padding: 0 !important;
+        margin-left: 20px;
+        width: 130px;
+      }
+
+      
+@media only screen and (max-width: 768px) {
+
+    .navbar-brand{
+        margin-top: 15px;
+        margin-bottom: 10px;
+        font-family: "acta-display", Georgia, Times New Roman, serif !important; 
+        text-transform: none; 
+        font-weight: 400;
+    }
+    
+    .navbar-brand:hover{
+        color: #ffffff !important;
+        transform: scale(1.025);
+        transition: all .5s ease;
+    }
+
+    .navbar {
+        background-color: #000000 !important;
+        width:100%;
+    }
+
+    .navbar .nav-link {
+            color:#ffffff !important;
+            margin: 0px !important;
+            padding: 5px 20px !important;
+            font-size: 10px !important;
+            font-weight: 300;
+        }
+    
+    .navbar .nav-link:hover {
+            margin-top: 0px !important;
+            color: #f06023 !important;
+            border: none !important;
+    }
+        
+}
+  

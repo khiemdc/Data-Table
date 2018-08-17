@@ -1,0 +1,89 @@
+<mat-card>{{pageTitle}} <a routerLink="/employeeForm/personal" class="create">Add Employee</a></mat-card>
+<div class="container-fluid">
+    <mat-form-field>
+        
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search">
+    </mat-form-field>
+</div>
+
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+        
+        <ng-container matColumnDef="CandidateId">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Candidate Id </th>
+          <td mat-cell *matCellDef="let candidate"><a [routerLink]="['/candidates', candidate.CandidateId]"> {{candidate.CandidateId}} </a></td>
+        </ng-container>      
+        
+        <ng-container matColumnDef="FirstName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> First Name </th>
+          <td mat-cell *matCellDef="let candidate"> {{candidate.FirstName}} </td>
+        </ng-container>      
+        
+        <ng-container matColumnDef="MiddleName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Middle Name </th>
+          <td mat-cell *matCellDef="let candidate"> {{candidate.MiddleName}} </td>
+        </ng-container>
+      
+        
+        <ng-container matColumnDef="LastName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Last Name </th>
+          <td mat-cell *matCellDef="let candidate"> {{candidate.LastName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Address">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Street Address </th>
+            <td mat-cell *matCellDef="let candidate"> {{candidate.Address}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Address2">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Line 2 </th>
+            <td mat-cell *matCellDef="let candidate"> {{candidate.Address2}} </td>
+        </ng-container>       
+
+        <ng-container matColumnDef="City">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> City </th>
+            <td mat-cell *matCellDef="let candidate"> {{candidate.City}} </td>
+        </ng-container>
+        <ng-container matColumnDef="State">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> State </th>
+            <td mat-cell *matCellDef="let candidate"> {{candidate.State}} </td>
+        </ng-container>
+        <ng-container matColumnDef="ZipCode">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Zip </th>
+            <td mat-cell *matCellDef="let candidate"> {{candidate.ZipCode}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Phone">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Phone Number </th>
+            <td mat-cell *matCellDef="let candidate"> {{candidate.Phone}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Fax">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Fax Number </th>
+            <td mat-cell *matCellDef="let candidate"> {{candidate.Fax}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Email">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Email Address </th>
+            <td mat-cell *matCellDef="let candidate"> {{candidate.Email}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Website">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Website </th>
+            <td mat-cell *matCellDef="let candidate"> {{candidate.Website}} </td>
+        </ng-container>  
+        <ng-container matColumnDef="Comments">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Comments </th>
+            <td mat-cell *matCellDef="let candidate"> {{candidate.Comments}} </td>
+        </ng-container>  
+
+        <ng-container matColumnDef="Actions">
+            <th mat-header-cell *matHeaderCellDef > Actions </th>
+            <td mat-cell *matCellDef="let row"> <button mat-flat-button >Edit</button> </td>
+         </ng-container>          
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table> 
+    
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+        
+</div>

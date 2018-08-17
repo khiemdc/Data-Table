@@ -1,0 +1,67 @@
+<div class="container">
+    <div class='card'
+    *ngIf='employee'>
+  <div class='card-header'>
+    {{pageTitle + ': ' + employee.Name}}
+  </div>
+  <div class='card-body'>
+    <div class='row'>
+      <div class='col-md-8'>
+        <div class='row'>
+          <div class='col-md-4'>Name:</div>
+          <div class='col-md-8'>{{employee.Name}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Functional Title:</div>
+          <div class='col-md-8'>{{employee.Functional_Title }}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>LCat:</div>
+          <div class='col-md-8'>{{employee.E_SITE_IDIQ_LCAT}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Start Date:</div>
+          <div class='col-md-8'>{{employee.Start_Date}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Location:</div>
+          <div class='col-md-8'>{{employee.Location }}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Email Address:</div>
+          <div class='col-md-8'>{{employee.eMail_Address }}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Phone Number:</div>
+          <div class='col-md-8'>{{employee.Phone_Number}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Clearance:</div>
+          <div class='col-md-8'>{{employee.Clearance}}</div>
+        </div>
+      </div>
+              
+    </div>
+  </div>
+  <div class='card-footer'>
+    <div claSS="row">
+      <button class='btn btn-outline-secondary'
+      (click)='onBack()'
+      style='width:80px; margin-left:15px;'>
+      <i class='fa fa-chevron-left'></i> Back
+    </button>
+  
+    <button class='btn btn-primary'            
+      style='margin-left:100px' [routerLink]="['/employee',employee.RosterId, 'edit']">
+       Edit
+    </button>
+
+    <button class='btn btn-danger'            
+      style='margin-left:100px' >
+      <i class="fa fa-trash"></i> Delete
+    </button>
+  </div>   
+    
+  </div>
+  </div>
+</div>

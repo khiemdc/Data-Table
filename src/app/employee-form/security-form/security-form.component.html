@@ -1,0 +1,52 @@
+<div class="board">
+  <msw-navbar></msw-navbar>
+
+<form #securityForm="ngForm" class="editForm" novalidate>
+<div class="form-horizontal">
+    <div class="tab-pane fade in active">
+        <h4 class="head text-center">{{title}}</h4>
+        <br/>
+        <div class='row'>
+            <div class='col-xs-offset-4 col-xs-10 col-sm-offset-5 col-sm-4'>
+                <div class="form-group">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" #security="ngModel" required name="security" [(ngModel)]="securityStatus" value="Uncleared">
+                            Uncleared
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" #security="ngModel" required name="security" [(ngModel)]="securityStatus" value="TS/SCI">
+                            TS/SCI
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" #security="ngModel" required name="security" [(ngModel)]="securityStatus" value="TS/SCI CI Poly">
+                            TS/SCI CI Poly
+                        </label>
+                    </div>
+                  <div class="radio">
+                      <label>
+                          <input type="radio" #security="ngModel" required name="security" [(ngModel)]="securityStatus" value="Secret">
+                          Secret
+                      </label>
+                  </div>
+                  <div class="radio">
+                      <label>
+                          <input type="radio" #security="ngModel" required name="security" [(ngModel)]="securityStatus" value="Interim Secret">
+                          Interim Secret
+                      </label>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group text-center space-20">
+            <button class="btn btn-outline-rounded btn-default" (click)="goToPrevious(securityForm)"> <span style="margin-right:10px;" class="glyphicon glyphicon-arrow-left"></span> Previous</button>
+            <button class="btn btn-outline-rounded btn-info" [disabled]="!securityForm.valid" (click)="goToNext(securityForm)"> Next <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></button>
+        </div>
+    </div>
+</div>
+</form>
+</div>

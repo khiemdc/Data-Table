@@ -1,0 +1,115 @@
+<div class="card container">
+  <div class="card-header">
+    {{ pageTitle }}
+  </div>
+
+  <div class="card-body">
+    <form [formGroup]="employeeForm" 
+          (ngSubmit)="saveEmployee()">
+     
+      <div class="form-group row">
+          <label class="control-label col-md-2">Employee Name:</label>
+          <div class="col-md-8">
+            <input type="text" class="col-md-8 form-control" formControlName="name">              
+          </div>
+          <span class="text-danger" *ngIf="name.invalid && formDir.submitted">
+              Name is required.
+          </span>
+      </div>
+      <div class="form-group row">
+          <label for="" class="control-label col-md-2">Functional Title:</label>
+          <div class="col-md-8">
+            <input type="text" class="col-md-8 form-control" formControlName="functionalTitle">              
+          </div>
+          <span class="text-danger" *ngIf="name.invalid && formDir.submitted">
+              Functional Title is required.
+          </span>
+      </div>
+
+      <div class="form-group row">
+          <label for="" class="control-lable col-md-2">E-SITE IDIQ LCat:</label>
+          <div class="col-md-8">
+            <input type="text" class="col-md-8 form-control" formControlName="lcat">
+          </div>
+          <span class="text-danger" *ngIf="name.invalid && formDir.submitted">
+              LCat level is required.
+          </span>
+      </div>
+      <div class="form-group row">
+          <label for="" class="control-lable col-md-2">Location:</label>
+          <div class="col-md-8">
+            <select class="col-md-8 form-control" data-val="true" formControlName="location">
+              <option value="">--Select Location--</option>
+              <option value="CON">CON</option>
+              <option value="GOV">GOV</option>
+                            
+            </select>            
+          </div>
+      </div>
+
+      <div class="form-group row">
+          <label for="" class="control-lable col-md-2">Email Address:</label>
+          <div class="col-md-8">
+            <input type="text" class="col-md-8 form-control" formControlName="email">              
+          </div>
+      </div>
+
+      <div class="form-group row">
+          <label for="" class="control-lable col-md-2">Phone Number:</label>
+          <div class="col-md-8">
+            <input type="text" class="col-md-8 form-control" formControlName="phoneNumber">              
+          </div>
+      </div>      
+
+      <div class="form-group row">
+          <label for="" class="control-lable col-md-2">Clearance:</label>
+          <div class="col-md-8">
+            <select class="col-md-8 form-control" data-val="true" formControlName="clearance">
+              <option value="">--Clearance Level--</option>
+              <option value="Top Secret">Top Secret</option>
+              <option value="TS/SCI">TS/SCI</option>
+              <option value="TS/SCI and up">TS/SCI and up</option>
+              <option value="TS/SCI CI Poly">TS/SCI CI Poly</option>
+              <option value="TS/SCI Poly">TS/SCI Poly</option>
+              <option value="UNCLEARED">UNCLEARED</option>
+              
+            </select>            
+          </div>
+      </div> 
+      
+      
+    </form>
+  </div>
+
+  <div class="card-footer">
+      <div class="form-group row">
+          <div class="col-md-1">
+            <button class="btn btn-primary"
+                    style='width:80px'
+                    type="submit"
+                    [disabled]="!employeeForm.valid || !employeeForm.dirty">
+              Save
+            </button>
+          </div>
+          <div class="col-md-1">
+            <button class="btn btn-outline-secondary"
+                    style='width:80px'
+                    type="button"
+                    [routerLink]="['/employees']" (click)="cancel()" >
+              Cancel
+            </button>
+          </div>
+          <div class="col-md-1">
+            <button class="btn btn-outline-danger"
+                    style='width:80px'
+                    type="button"
+                    (click)="deleteEmployee()">
+              Delete
+            </button>
+          </div>
+        </div>
+  </div>
+
+  
+</div>
+

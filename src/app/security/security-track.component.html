@@ -1,0 +1,109 @@
+<h2>Employee Name</h2>
+<mat-dialog-content>
+  <div class="example-container align-center">
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Clearance Verifivcation">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <span class="input-field">
+      <mat-form-field>
+        <textarea matInput placeholder="Comment"></textarea>
+      </mat-form-field>
+    </span>
+
+  </div>
+
+  <div class="example-container">
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker1" placeholder="Provided Paper work to candidate">
+      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+      <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+    <span class="input-field">
+      <mat-form-field>
+        <textarea matInput placeholder="Comment"></textarea>
+      </mat-form-field>
+    </span>
+
+  </div>
+
+  <div class="example-container">
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker2" placeholder="SCI Nomination letter ">
+      <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+      <mat-datepicker #picker2></mat-datepicker>
+    </mat-form-field>
+
+    <span class="input-field">
+      <mat-form-field>
+        <textarea matInput placeholder="Comment"></textarea>
+      </mat-form-field>
+    </span>
+  </div>
+
+  <div class="example-container">
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker3" placeholder="Submit to CORE">
+      <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+      <mat-datepicker #picker3></mat-datepicker>
+    </mat-form-field>
+
+    <span class="input-field">
+      <mat-form-field>
+        <textarea matInput placeholder="Comment"></textarea>
+      </mat-form-field>
+    </span>
+  </div>
+
+  <div class="example-container">
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker4" placeholder="Upload to Titan (DIA) ">
+      <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+      <mat-datepicker #picker4></mat-datepicker>
+    </mat-form-field>
+
+    <span class="input-field">
+      <mat-form-field>
+        <textarea matInput placeholder="Comment"></textarea>
+      </mat-form-field>
+    </span>
+  </div>
+  <div class="example-container">
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker5" placeholder="Security determination (DIA)">
+      <mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle>
+      <mat-datepicker #picker5></mat-datepicker>
+    </mat-form-field>
+
+    <span class="input-field">
+      <mat-form-field>
+        <textarea matInput placeholder="Comment"></textarea>
+      </mat-form-field>
+    </span>
+  </div>
+
+  <div class="example-container">
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker6" placeholder="Notification to Buffalo">
+      <mat-datepicker-toggle matSuffix [for]="picker6"></mat-datepicker-toggle>
+      <mat-datepicker #picker6></mat-datepicker>
+    </mat-form-field>
+
+    <span class="input-field">
+      <mat-form-field>
+        <textarea matInput placeholder="Comment"></textarea>
+      </mat-form-field>
+    </span>
+  </div>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <div style="margin-right:50px">
+    <button mat-raised-button>Cancel</button>
+  </div>
+  <div>
+    <button mat-flat-button>Save</button>
+  </div>
+</mat-dialog-actions>
